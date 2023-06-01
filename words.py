@@ -1,0 +1,5 @@
+word = [
+    'lion',
+    'goat',
+    'duck'
+]
