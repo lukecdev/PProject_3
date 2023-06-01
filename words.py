@@ -1,4 +1,4 @@
-word = [
+words = [
     'lion',
     'goat',
     'duck'
