@@ -13,20 +13,35 @@ def game_start():
     print("Press" + "1" + "For topic 1")
     print("Press" + "2" + "For topic 2")
     print("Press" + "3" + "For topic 3")
-
-    while True:
+    topic = False
+    while not topic:
         select = input("\n")
-        break
-   
+        if select == "1":
+            topic = True
+            
+            return play_game()
+        
+        elif select == "2":
+            topic = True
+            print("topic2")
+            
+
+        elif select == "3":
+            topic = True
+            break    
+
+        else:
+            print(" Please select 1, 2 or 3 only to continue")
     
 def play_game():
-    print("Play game")
+    print("Welcome to Guess the word")
+    print("FFFF")
 
 def main():
     """
     Function to run the game from the beginning
     """
     game_start()
-    # play_game()
+    #play_game()
 
 main()
