@@ -4,13 +4,31 @@
 import random
 from words import words
 
-def game_start():
+USER_NAME = ""
+
+def Welcome_game():
     """
     Start function with game instructions 
     """
+    global USER_NAME
+    while True:
+        
+        USER_NAME = input("Please  enter your name:\n")
+        
+        #except ValueError:
+           # clear()
+            #print("Name must be longer than 2 characters")
+
+        #if (len(USER_NAME) >= 2 and len(USER_NAME) <= 8 and USER_NAME.count("") <= 0):
+            
+        #else:
+           # clear()
+           # print(Welcome)        
+
     print("Game Title")
     print("Game Difficulty \n")
     print("Press" + "1" + "For topic 1")
+    print(f"2 Game Instructions.")
     print("Press" + "2" + "For topic 2")
     print("Press" + "3" + "For topic 3")
     topic = False
@@ -41,7 +59,7 @@ def main():
     """
     Function to run the game from the beginning
     """
-    game_start()
+    Welcome_game()
     #play_game()
 
 main()
