@@ -14,6 +14,13 @@ def Welcome_game():
     while True:
         
         USER_NAME = input("Please  enter your name:\n")
+        if USER_NAME == "y": 
+            print("Username is: " + USER_NAME)
+            game_start()
+        else:
+            print("please try again")  
+            end_game()
+        
         
         #except ValueError:
            # clear()
@@ -24,7 +31,7 @@ def Welcome_game():
         #else:
            # clear()
            # print(Welcome)        
-
+def game_start():
     print("Game Title")
     print("Game Difficulty \n")
     print("Press" + "1" + "For topic 1")
@@ -36,13 +43,13 @@ def Welcome_game():
         select = input("\n")
         if select == "1":
             topic = True
-            
+                
             return play_game()
-        
+            
         elif select == "2":
             topic = True
             print("topic2")
-            
+                
 
         elif select == "3":
             topic = True
@@ -50,10 +57,14 @@ def Welcome_game():
 
         else:
             print(" Please select 1, 2 or 3 only to continue")
+            break
     
 def play_game():
     print("Welcome to Guess the word")
     print("FFFF")
+
+def end_game():
+        Exception
 
 def main():
     """
