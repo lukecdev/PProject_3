@@ -93,7 +93,7 @@ def play_game():
     https://www.youtube.com/watch?v=5x6iAKdJB6U 
     """
 
-    word = "top"
+    word = get_random_word()
     num_lives = 5
     guesses = []
     finish = False
