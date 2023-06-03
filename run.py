@@ -96,9 +96,9 @@ def play_game():
     word = "top"
     num_lives = 5
     guesses = []
-    done = False
+    finish = False
     
-    while not done:
+    while not finish:
         for letter in word:
             if letter.lower() in guesses:
                 print(letter, end=" ")
@@ -113,14 +113,16 @@ def play_game():
             if num_lives == 0:
                 break
         
-        done = True
-        
-        play_again()             
-
-    print("Welcome to Guess the word")
-    print("FFFF") 
-    return play_again() 
-    #return end_game()  
+        finish = True
+        for letter in word:
+            if letter.lower() not in guesses:
+                finish = False  
+        if finish:
+            print(f"congrats you guessed {word} correct!")  
+        else:
+            print(f"You ran out of lives, the correct word was {word}")    
+                             
+    return play_again()   
 
 def end_game():
         print("Thank you")
