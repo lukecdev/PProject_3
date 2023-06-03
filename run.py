@@ -94,7 +94,8 @@ def play_game():
     """
 
     word = "top"
-    guesses = ["t", "o"]
+    num_lives = 5
+    guesses = []
     done = False
     
     while not done:
@@ -104,7 +105,16 @@ def play_game():
             else:
                 print("_", end=" ")   
         print("")
+
+        guess = input(f"lives left{num_lives}, Next letter: ")
+        guesses.append(guess.lower())
+        if guess.lower() not in word.lower():
+            num_lives -= 1
+            if num_lives == 0:
+                break
+        
         done = True
+        
         play_again()             
 
     print("Welcome to Guess the word")
