@@ -58,13 +58,22 @@ def game_start():
         else:
             print(" Please select 1, 2 or 3 only to continue")
             break
-    
+
+def get_random_word():
+    """
+    Get random words for game from list
+    """   
+    global word
+    word = random.choice(words) 
+
+    return word.lower()
+
 def play_game():
     print("Welcome to Guess the word")
-    print("FFFF")
+    print("FFFF")    
 
 def end_game():
-        Exception
+        sys.exit()
 
 def main():
     """
