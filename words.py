@@ -3,3 +3,8 @@ words = [
     'goat',
     'duck'
 ]
+
+cats = [
+    'cat',
+    'dog'
+]

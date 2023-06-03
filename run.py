@@ -2,7 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
-from words import words
+from words import words, cats 
 
 USER_NAME = ""
 
@@ -33,7 +33,7 @@ def Welcome_game():
 def game_start():
     print("Game Title")
     print("Game Difficulty \n")
-    print("Press" + "1" + "For topic 1")
+    print("Press" "1" "For topic 1")
     print(f"2 Game Instructions.")
     print("Press" + "2" + "For topic 2")
     print("Press" + "3" + "For topic 3")
@@ -52,7 +52,7 @@ def game_start():
 
         elif select == "3":
             topic = True
-            play_game()  
+            play_cats()  
 
         else:
             print(" Please select 1, 2 or 3 only to continue")
@@ -64,6 +64,15 @@ def get_random_word():
     """   
     global word
     word = random.choice(words) 
+
+    return word.lower()
+
+def get_cat_word():
+    """
+    gets randon word from cats word list
+    """   
+    global word
+    word = random.choice(cats)
 
     return word.lower()
 
@@ -84,7 +93,40 @@ def play_again():
     else:
         print("try again")        
 
+def play_cats():
+    """
+    Running game with cats words list
+    """
+    word = get_cat_word()
+    num_lives = 5
+    guesses = []
+    finish = False
 
+    while not finish:
+        for letter in word:
+            if letter.lower() in guesses:
+                print(letter, end=" ")
+            else:
+                print("_", end=" ")   
+        print("")
+
+        guess = input(f"lives left{num_lives}, Next letter: ")
+        guesses.append(guess.lower())
+        if guess.lower() not in word.lower():
+            num_lives -= 1
+            if num_lives == 0:
+                break
+        
+        finish = True
+        for letter in word:
+            if letter.lower() not in guesses:
+                finish = False  
+        if finish:
+            print(f"congrats you guessed {word} correct!")  
+        else:
+            print(f"You ran out of lives, the correct word was {word}")    
+                             
+    return play_again() 
 
 def play_game():
     """
@@ -126,7 +168,7 @@ def play_game():
 
 def end_game():
         print("Thank you")
-        return "none"
+        play_again()
 
 def main():
     """
