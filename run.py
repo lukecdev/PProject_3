@@ -21,7 +21,6 @@ def Welcome_game():
             print("please try again")  
             end_game()
         
-        
         #except ValueError:
            # clear()
             #print("Name must be longer than 2 characters")
@@ -68,12 +67,6 @@ def get_random_word():
 
     return word.lower()
 
-def play_game():
-    print("Welcome to Guess the word")
-    print("FFFF") 
-    return play_again() 
-    #return end_game()  
-
 def play_again():
     """
     A loop to repeat the game if the user wants to
@@ -84,13 +77,40 @@ def play_again():
         play_loop = input("Do you want to play again? y or n?")
     if play_loop == "y":
         print("you entered Y")
+        Welcome_game()
     if play_loop == "n":
         print("you entered N")
         exit()
     else:
-        print("try again")            
-    
+        print("try again")        
 
+
+
+def play_game():
+    """
+    Runs the game 
+    Game is based around the Hang-Man game from the youtube video
+    https://www.youtube.com/watch?v=5x6iAKdJB6U 
+    """
+
+    word = "top"
+    guesses = ["t", "o"]
+    done = False
+    
+    while not done:
+        for letter in word:
+            if letter.lower() in guesses:
+                print(letter, end=" ")
+            else:
+                print("_", end=" ")   
+        print("")
+        done = True
+        play_again()             
+
+    print("Welcome to Guess the word")
+    print("FFFF") 
+    return play_again() 
+    #return end_game()  
 
 def end_game():
         print("Thank you")
@@ -102,8 +122,6 @@ def main():
     """
     Welcome_game()
     play_game()
-    play_again()
-    
-
+ 
 print("Welcome to Guess the word")
 main()
