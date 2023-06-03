@@ -43,21 +43,21 @@ def game_start():
         select = input("\n")
         if select == "1":
             topic = True
-                
-            return play_game()
+            play_game()
             
         elif select == "2":
             topic = True
             print("topic2")
+            play_game()
                 
 
         elif select == "3":
             topic = True
-            break    
+            play_game()  
 
         else:
             print(" Please select 1, 2 or 3 only to continue")
-            break
+            end_game()
 
 def get_random_word():
     """
@@ -70,16 +70,40 @@ def get_random_word():
 
 def play_game():
     print("Welcome to Guess the word")
-    print("FFFF")    
+    print("FFFF") 
+    return play_again() 
+    #return end_game()  
+
+def play_again():
+    """
+    A loop to repeat the game if the user wants to
+    """
+    global play_loop
+    play_loop = input("Do you want to play again? y or n?")
+    while play_loop not in ("y", "n"):
+        play_loop = input("Do you want to play again? y or n?")
+    if play_loop == "y":
+        print("you entered Y")
+    if play_loop == "n":
+        print("you entered N")
+        exit()
+    else:
+        print("try again")            
+    
+
 
 def end_game():
-        sys.exit()
+        print("Thank you")
+        return "none"
 
 def main():
     """
     Function to run the game from the beginning
     """
     Welcome_game()
-    #play_game()
+    play_game()
+    play_again()
+    
 
+print("Welcome to Guess the word")
 main()
