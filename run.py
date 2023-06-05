@@ -31,12 +31,19 @@ def Welcome_game():
            # clear()
            # print(Welcome)        
 def game_start():
+    print("""
+    1 - topic words
+    2 - game rules
+    3 - topic cats
+    4 - quit
+    """)
+
     print("Game Title")
-    print("Game Difficulty \n")
-    print("Press" "1" "For topic 1")
-    print(f"2 Game Instructions.")
-    print("Press" + "2" + "For topic 2")
-    print("Press" + "3" + "For topic 3")
+    #print("Game Difficulty \n")
+    #print("Press" "1" "For topic 1")
+    #print(f"2 Game Instructions.")
+    #print("Press" + "2" + "For topic 2")
+    #print("Press" + "3" + "For topic 3")
     topic = False
     while not topic:
         select = input("\n")
@@ -69,7 +76,7 @@ def get_random_word():
 
 def get_cat_word():
     """
-    gets randon word from cats word list
+    gets random word from cats word list
     """   
     global word
     word = random.choice(cats)
