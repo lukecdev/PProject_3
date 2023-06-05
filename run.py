@@ -57,26 +57,31 @@ def game_start():
             
         elif select == "2":
             topic = True
-            print("topic2")
             instructions()
                 
 
         elif select == "3":
             topic = True
-            play_cats()  
+            clear()
+            exit()  
 
         else:
-            print(" Please select 1, 2 or 3 only to continue")
-            end_game()
+            print("Please select 1, 2 or 3 only to continue")
+            game_start()
 
 def instructions():
     """
     Shows the instructions of the game.
     """
+    print("Instructions for the game\n")
     print("""
-    You need to select
+Enter a letter from A to Z only
+If the letter is correct it will show in the above word.
+If the letter is not correct, you will loose a live. 
+If you reach 0 lives, the game is over.
     """)
-    input("press y if you understand")
+    print("Best of Luck!")
+    input("Press Enter to return to main menu!")
     game_start()
 
 def get_random_word():
