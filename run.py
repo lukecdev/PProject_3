@@ -41,18 +41,13 @@ def Welcome_game():
 def game_start():
     print("Please select 1, 2, 3 or 4 from the Main Menu below.\n")
     print("""
-1 - topic words
-2 - game rules
-3 - topic cats
-4 - quit
+1 - Play Game
+2 - Game Instructions
+3 - Exit Game
     \n""")
 
     print("What is your choice?")
-    #print("Game Difficulty \n")
-    #print("Press" "1" "For topic 1")
-    #print(f"2 Game Instructions.")
-    #print("Press" + "2" + "For topic 2")
-    #print("Press" + "3" + "For topic 3")
+
     topic = False
     while not topic:
         select = input("\n")
@@ -63,7 +58,7 @@ def game_start():
         elif select == "2":
             topic = True
             print("topic2")
-            play_game()
+            instructions()
                 
 
         elif select == "3":
@@ -73,6 +68,16 @@ def game_start():
         else:
             print(" Please select 1, 2 or 3 only to continue")
             end_game()
+
+def instructions():
+    """
+    Shows the instructions of the game.
+    """
+    print("""
+    You need to select
+    """)
+    input("press y if you understand")
+    game_start()
 
 def get_random_word():
     """
@@ -106,6 +111,7 @@ def play_again():
         Welcome_game()
     if play_loop == "n":
         print("you entered N")
+        clear()
         exit()
     else:
         print("try again")        
