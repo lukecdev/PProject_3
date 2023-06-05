@@ -13,31 +13,33 @@ def clear():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
-def Welcome_game():
+def welcome_game():
     """
     Start function with game instructions 
     """
+
     print("welcome")
     global USER_NAME
     while True:
-        
-        USER_NAME = input("Please  enter your name:\n")
-        if USER_NAME == "y": 
-            print("Username is: " + USER_NAME)
+        USER_NAME = input("Please enter your name:\n")
+        if (USER_NAME.isalpha() == True and len(USER_NAME) >=2):
+            print("Hello " + USER_NAME + "!\n")
             game_start()
         else:
-            print("please try again")  
-            end_game()
+            print("User name must be greater than 2 and only letters.")  
+            welcome_game()
         
         #except ValueError:
            # clear()
             #print("Name must be longer than 2 characters")
 
         #if (len(USER_NAME) >= 2 and len(USER_NAME) <= 8 and USER_NAME.count("") <= 0):
-            
+         
+        
         #else:
            # clear()
-           # print(Welcome)        
+           # print(Welcome)  
+      
 def game_start():
     print("Please select 1, 2, 3 or 4 from the Main Menu below.\n")
     print("""
@@ -113,7 +115,7 @@ def play_again():
     if play_loop == "y":
         print("you entered Y")
         clear()
-        Welcome_game()
+        welcome_game()
     if play_loop == "n":
         print("you entered N")
         clear()
@@ -202,7 +204,7 @@ def main():
     """
     Function to run the game from the beginning
     """
-    Welcome_game()
+    welcome_game()
     play_game()
  
 print("Welcome to Guess the word")
