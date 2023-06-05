@@ -3,13 +3,21 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
 from words import words, cats 
+import os
 
 USER_NAME = ""
+
+def clear():
+    """
+    Function to clear terminal for a better user experience.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 def Welcome_game():
     """
     Start function with game instructions 
     """
+    print("welcome")
     global USER_NAME
     while True:
         
@@ -31,14 +39,15 @@ def Welcome_game():
            # clear()
            # print(Welcome)        
 def game_start():
+    print("Please select 1, 2, 3 or 4 from the Main Menu below.\n")
     print("""
-    1 - topic words
-    2 - game rules
-    3 - topic cats
-    4 - quit
-    """)
+1 - topic words
+2 - game rules
+3 - topic cats
+4 - quit
+    \n""")
 
-    print("Game Title")
+    print("What is your choice?")
     #print("Game Difficulty \n")
     #print("Press" "1" "For topic 1")
     #print(f"2 Game Instructions.")
@@ -93,6 +102,7 @@ def play_again():
         play_loop = input("Do you want to play again? y or n?")
     if play_loop == "y":
         print("you entered Y")
+        clear()
         Welcome_game()
     if play_loop == "n":
         print("you entered N")
