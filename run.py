@@ -28,18 +28,7 @@ def welcome_game():
         else:
             print("User name must be greater than 2 and only letters.")  
             welcome_game()
-        
-        #except ValueError:
-           # clear()
-            #print("Name must be longer than 2 characters")
-
-        #if (len(USER_NAME) >= 2 and len(USER_NAME) <= 8 and USER_NAME.count("") <= 0):
-         
-        
-        #else:
-           # clear()
-           # print(Welcome)  
-      
+    
 def game_start():
     print("Please select 1, 2, 3 or 4 from the Main Menu below.\n")
     print("""
@@ -60,8 +49,7 @@ def game_start():
         elif select == "2":
             topic = True
             instructions()
-                
-
+        
         elif select == "3":
             topic = True
             clear()
@@ -145,6 +133,7 @@ def play_cats():
         if guess.lower() not in word.lower():
             num_lives -= 1
             if num_lives == 0:
+                print(f"The word was {word}")
                 break
         
         finish = True
@@ -168,6 +157,7 @@ def play_game():
     word = get_random_word()
     num_lives = 5
     guesses = []
+
     finish = False
     
     while not finish:
@@ -175,24 +165,26 @@ def play_game():
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print("_", end=" ")   
-        print("")
+                print("_", end= "")   
+        print(" ")
 
-        guess = input(f"lives left{num_lives}, Next letter: ")
+        guess = input(f"lives left {num_lives}, Next letter: ")
         guesses.append(guess.lower())
         if guess.lower() not in word.lower():
             num_lives -= 1
-            if num_lives == 0:
-                break
+            #if num_lives == 0:
+                #print(f"The word was {word}")
+                #break
         
         finish = True
         for letter in word:
             if letter.lower() not in guesses:
                 finish = False  
-        if finish:
+        if finish == True:
             print(f"congrats you guessed {word} correct!")  
-        else:
-            print(f"You ran out of lives, the correct word was {word}")    
+        elif num_lives == 0:
+            print(f"You ran out of lives, the correct word was {word}")
+            break    
                              
     return play_again()   
 
