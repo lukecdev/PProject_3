@@ -4,6 +4,8 @@
 import random
 from words import words, cats 
 import os
+import colorama # Adds color to text
+from colorama import Fore, Style
 
 USER_NAME = ""
 
@@ -18,7 +20,7 @@ def welcome_game():
     Start function with game instructions 
     """
 
-    print("welcome")
+    print(f"{Fore.BLUE}welcome")
     global USER_NAME
     while True:
         USER_NAME = input("Please enter your name:\n")
