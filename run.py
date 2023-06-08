@@ -159,6 +159,7 @@ def play_game():
     word = get_random_word()
     num_lives = 5
     guesses = []
+    wrong_letters = []
 
     finish = False
     
@@ -174,9 +175,8 @@ def play_game():
         guesses.append(guess.lower())
         if guess.lower() not in word.lower():
             num_lives -= 1
-            #if num_lives == 0:
-                #print(f"The word was {word}")
-                #break
+            print(f"letters guessed - {guesses}")
+            
         
         finish = True
         for letter in word:
