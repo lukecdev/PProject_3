@@ -20,10 +20,10 @@ def welcome_game():
     Start function with game instructions 
     """
 
-    print(f"{Fore.BLUE}welcome")
+    print(f"{Fore.GREEN}welcome\n")
     global USER_NAME
     while True:
-        USER_NAME = input("Please enter your name:\n")
+        USER_NAME = input(f"{Fore.WHITE}Please enter your name:\n")
         if (USER_NAME.isalpha() == True and len(USER_NAME) >=2):
             print("Hello " + USER_NAME + "!\n")
             game_start()
