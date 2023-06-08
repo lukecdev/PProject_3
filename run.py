@@ -171,13 +171,12 @@ def play_game():
                 print("_", end= "")   
         print(" ")
 
-        guess = input(f"lives left {num_lives}, Next letter: ")
+        guess = input(f"{USER_NAME}'s lives left {num_lives}, Next letter: ")
         guesses.append(guess.lower())
         if guess.lower() not in word.lower():
             num_lives -= 1
             print(f"letters guessed - {guesses}")
-            
-        
+             
         finish = True
         for letter in word:
             if letter.lower() not in guesses:
