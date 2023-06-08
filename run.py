@@ -127,7 +127,7 @@ def play_cats():
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print("_", end=" ")   
+                print("__", end=" ")   
         print("")
 
         guess = input(f"lives left{num_lives}, Next letter: ")
