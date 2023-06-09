@@ -32,9 +32,9 @@ def welcome_game():
             welcome_game()
     
 def game_start():
-    print("Please select 1, 2, 3 or 4 from the Main Menu below.\n")
+    print("Please select 1, 2 or 3 from the Main Menu below.\n")
     print("""
-1 - Play Game
+1 - Enter Game
 2 - Game Instructions
 3 - Exit Game
     \n""")
@@ -46,7 +46,7 @@ def game_start():
         select = input("\n")
         if select == "1":
             topic = True
-            play_game()
+            select_level()
             
         elif select == "2":
             topic = True
@@ -93,6 +93,39 @@ def get_cat_word():
     word = random.choice(cats)
 
     return word.lower()
+
+def select_level():
+    """
+    Lets the player chose the game difficulty
+    """
+    print("Select Level Below")
+    print("Press 1 for Easy")
+    print("Press 2 for Normal")
+    print("Press 3 for Advanced")
+    print("Press 4 for Main Menu")
+
+    level = False
+    while not level:
+        select = input("\n")
+        if select == "1":
+            level = True
+            play_game()
+            
+        elif select == "2":
+            level = True
+            instructions()
+        
+        elif select == "3":
+            level = True
+            play_game()
+
+        elif select == "4":
+            level = True
+            game_start()
+
+        else:
+            print("Please select 1, 2 or 3 only to continue")
+            select_level()
 
 def play_again():
     """
