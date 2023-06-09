@@ -195,7 +195,8 @@ def play_game():
     wrong_letters = []
 
     finish = False
-    
+    print(f"The {len(word)} word is:")
+
     while not finish:
         for letter in word:
             if letter.lower() in guesses:
