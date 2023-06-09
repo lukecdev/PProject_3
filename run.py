@@ -182,9 +182,9 @@ def play_game():
             if letter.lower() not in guesses:
                 finish = False  
         if finish == True:
-            print(f"congrats you guessed {word} correct!")  
+            print(f"congrats {USER_NAME} you guessed {word} correct!")  
         elif num_lives == 0:
-            print(f"You ran out of lives, the correct word was {word}")
+            print(f"You ran out of lives {USER_NAME}, the correct word was {word}")
             break    
                              
     return play_again()   
