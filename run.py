@@ -107,9 +107,9 @@ def play_again():
         clear()
         welcome_game()
     if play_loop == "n":
-        print("you entered N")
         clear()
-        exit()
+        #exit()
+        print(f"Thank you for playing {USER_NAME}!")
     else:
         print("try again")        
 
