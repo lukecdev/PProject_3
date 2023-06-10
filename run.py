@@ -2,7 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
-from words import words, cats 
+from words import words 
 import os
 import colorama # Adds color to text
 from colorama import Fore, Style
@@ -38,11 +38,9 @@ def game_start():
 3 - Exit Game
     \n""")
 
-    print("What is your choice?")
-
     topic = False
     while not topic:
-        select = input("\n")
+        select = input("What is your choice?")
         if select == "1":
             topic = True
             select_level()
@@ -64,7 +62,7 @@ def instructions():
     """
     Shows the instructions of the game.
     """
-    print("Instructions for the game\n")
+    print("Game Instructions:")
     print("""
 Enter a letter from A to Z only
 If the letter is correct it will show in the above word.
@@ -84,23 +82,17 @@ def get_random_word():
 
     return word.lower()
 
-def get_cat_word():
-    """
-    gets random word from cats word list
-    """   
-    global word
-    word = random.choice(cats)
-
-    return word.lower()
-
 def select_level():
     """
-    Lets the player chose the game difficulty
+    Lets the player chose the game difficulty 
+    which affects the amount of lives they get.
     """
-    print("Select Level Below")
-    print("Press 1 for Normal")
-    print("Press 2 for Expert")
-    print("Press 3 for Main Menu")
+    print("Select Level Below:")
+    print("""
+1 - Normal
+2 - Expert
+3 - Main Menu
+    \n""")
 
     level = False
     while not level:
@@ -215,9 +207,11 @@ def play_game():
             if letter.lower() not in guesses:
                 finish = False  
         if finish == True:
-            print(f"congrats {USER_NAME} you guessed {word} correct!")  
+            print(f"Congrats {USER_NAME} you guessed {Fore.GREEN}{word} correct!"
+                 f"{Fore.WHITE}")  
         elif num_lives == 0:
-            print(f"You ran out of lives {USER_NAME}, the correct word was {word}")
+            print(f"You ran out of lives {USER_NAME}, the correct word was {Fore.GREEN}{word}!"
+                 f"{Fore.WHITE}")
             break    
                              
     return play_again()   

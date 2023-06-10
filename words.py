@@ -24,9 +24,5 @@ words = [
     'train',
 ]
 
-cats = [
-    'cat',
-    'dog'
-]
 
 
