@@ -96,7 +96,7 @@ def select_level():
 
     level = False
     while not level:
-        select = input("\n")
+        select = input("Your choice:")
         if select == "1":
             level = True
             play_easy()
@@ -122,7 +122,6 @@ def play_again():
     while play_loop not in ("y", "n"):
         play_loop = input("Do you want to play again? y or n?")
     if play_loop == "y":
-        print("you entered Y")
         clear()
         game_start()
     if play_loop == "n":
