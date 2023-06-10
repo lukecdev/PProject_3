@@ -19,7 +19,6 @@ def welcome_game():
     """
     Start function with game instructions 
     """
-
     print(f"{Fore.GREEN}welcome\n")
     global USER_NAME
     while True:
@@ -101,25 +100,20 @@ def select_level():
     print("Select Level Below")
     print("Press 1 for Easy")
     print("Press 2 for Normal")
-    print("Press 3 for Advanced")
-    print("Press 4 for Main Menu")
+    print("Press 3 for Main Menu")
 
     level = False
     while not level:
         select = input("\n")
         if select == "1":
             level = True
-            play_game()
+            play_easy()
             
         elif select == "2":
             level = True
-            instructions()
-        
-        elif select == "3":
-            level = True
             play_game()
 
-        elif select == "4":
+        elif select == "3":
             level = True
             game_start()
 
@@ -146,41 +140,46 @@ def play_again():
     else:
         print("try again")        
 
-def play_cats():
+def play_easy():
     """
-    Running game with cats words list
+    Runs the game 
+    Game is based around the Hang-Man game from the youtube video
+    https://www.youtube.com/watch?v=5x6iAKdJB6U 
     """
-    word = get_cat_word()
-    num_lives = 5
+
+    word = get_random_word()
+    num_lives = 10
     guesses = []
+    wrong_letters = []
+
     finish = False
+    print(f"The {len(word)} word is:")
 
     while not finish:
         for letter in word:
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print("__", end=" ")   
-        print("")
+                print("_", end= "")   
+        print(" ")
 
-        guess = input(f"lives left{num_lives}, Next letter: ")
+        guess = input(f"{USER_NAME}'s lives left {num_lives}, Next letter: ")
         guesses.append(guess.lower())
         if guess.lower() not in word.lower():
             num_lives -= 1
-            if num_lives == 0:
-                print(f"The word was {word}")
-                break
-        
+            print(f"letters guessed - {guesses}")
+             
         finish = True
         for letter in word:
             if letter.lower() not in guesses:
                 finish = False  
-        if finish:
-            print(f"congrats you guessed {word} correct!")  
-        else:
-            print(f"You ran out of lives, the correct word was {word}")    
+        if finish == True:
+            print(f"congrats {USER_NAME} you guessed {word} correct!")  
+        elif num_lives == 0:
+            print(f"You ran out of lives {USER_NAME}, the correct word was {word}")
+            break    
                              
-    return play_again() 
+    return play_again()   
 
 def play_game():
     """
