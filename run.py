@@ -160,7 +160,7 @@ def play_easy():
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print("_", end= "")   
+                print(" _ ", end= "")   
         print(" ")
 
         guess = input(f"{USER_NAME}'s lives left {num_lives}, Next letter: ")
@@ -201,7 +201,7 @@ def play_game():
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print("_", end= "")   
+                print(" _ ", end= "")   
         print(" ")
 
         guess = input(f"{USER_NAME}'s lives left {num_lives}, Next letter: ")
