@@ -28,7 +28,9 @@ def welcome_game():
             welcome_game()
     
 def game_start():
-
+    """
+    Main Menu section of the game.
+    """
     print("Please select 1, 2 or 3 from the Main Menu below.\n")
     print("""
 1 - Enter Game
@@ -118,7 +120,7 @@ def select_level():
 
 def play_again():
     """
-    A loop to repeat the game if the user wants to
+    A loop to repeat the game if the user wants to.
     """
     global play_loop
     play_loop = input("Do you want to play again? (Y/N)")
@@ -136,7 +138,7 @@ def play_again():
 
 def play_easy():
     """
-    Runs the game 
+    Runs the game with easy difficulty, 10 lives
     Game is based around the Hang-Man game from the youtube video
     https://www.youtube.com/watch?v=5x6iAKdJB6U 
     """
@@ -180,7 +182,7 @@ def play_easy():
 
 def play_expert():
     """
-    Runs the game 
+    Runs the game in expert difficulty, 5 lives.
     Game is based around the Hang-Man game from the youtube video
     https://www.youtube.com/watch?v=5x6iAKdJB6U 
     """
