@@ -19,7 +19,7 @@ def welcome_game():
     """
     Start function with game instructions 
     """
-    print(f"{Fore.GREEN}welcome\n")
+    print(f"\n{Fore.GREEN}WELCOME TO GUESS THE WORD!\n")
     global USER_NAME
     while True:
         USER_NAME = input(f"{Fore.WHITE}Please enter your name:\n")
@@ -232,6 +232,5 @@ def main():
     """
     welcome_game()
     play_game()
- 
-print("Welcome to Guess the word")
+
 main()
