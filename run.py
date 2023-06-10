@@ -1,6 +1,3 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
 from words import words 
 import os
@@ -31,13 +28,13 @@ def welcome_game():
             welcome_game()
     
 def game_start():
+
     print("Please select 1, 2 or 3 from the Main Menu below.\n")
     print("""
 1 - Enter Game
 2 - Game Instructions
 3 - Exit Game
     \n""")
-
     topic = False
     while not topic:
         select = input("What is your choice?")
@@ -109,7 +106,7 @@ def select_level():
             
         elif select == "2":
             level = True
-            play_game()
+            play_expert()
 
         elif select == "3":
             level = True
@@ -143,7 +140,6 @@ def play_easy():
     Game is based around the Hang-Man game from the youtube video
     https://www.youtube.com/watch?v=5x6iAKdJB6U 
     """
-
     word = get_random_word()
     num_lives = 10
     guesses = []
@@ -178,13 +174,12 @@ def play_easy():
                              
     return play_again()   
 
-def play_game():
+def play_expert():
     """
     Runs the game 
     Game is based around the Hang-Man game from the youtube video
     https://www.youtube.com/watch?v=5x6iAKdJB6U 
     """
-
     word = get_random_word()
     num_lives = 5
     guesses = []
@@ -226,6 +221,5 @@ def main():
     Function to run the game from the beginning
     """
     welcome_game()
-    play_game()
-
+    
 main()
