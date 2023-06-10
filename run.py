@@ -164,7 +164,7 @@ def play_easy():
         guesses.append(guess.lower())
         if guess.lower() not in word.lower():
             num_lives -= 1
-            print(f"letters guessed - {guesses}")
+            print(f"letters guessed: {guesses}")
              
         finish = True
         for letter in word:
@@ -205,7 +205,7 @@ def play_game():
         guesses.append(guess.lower())
         if guess.lower() not in word.lower():
             num_lives -= 1
-            print(f"letters guessed - {guesses}")
+            print(f"letters guessed: {guesses}")
              
         finish = True
         for letter in word:
