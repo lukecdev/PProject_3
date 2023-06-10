@@ -124,9 +124,9 @@ def play_again():
     A loop to repeat the game if the user wants to
     """
     global play_loop
-    play_loop = input("Do you want to play again? y or n?")
+    play_loop = input("Do you want to play again? (Y/N)")
     while play_loop not in ("y", "n"):
-        play_loop = input("Do you want to play again? y or n?")
+        play_loop = input("Do you want to play again? (Y/N)")
     if play_loop == "y":
         clear()
         game_start()
@@ -220,10 +220,6 @@ def play_game():
             break    
                              
     return play_again()   
-
-def end_game():
-        print("Thank you")
-        play_again()
 
 def main():
     """
