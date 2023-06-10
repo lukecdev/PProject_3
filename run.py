@@ -62,14 +62,19 @@ def instructions():
     """
     Shows the instructions of the game.
     """
-    print("Game Instructions:")
+    print(f"{Fore.YELLOW}Game Instructions:"
+         f"{Fore.WHITE}") 
     print("""
-Enter a letter from A to Z only
+Enter the game and choose ypur difficulty.
+Easy difficulty gives the user 10 lives.
+Expert difficulty gives the user 5 lives.  
+Enter a letter from A to Z only.
 If the letter is correct it will show in the above word.
 If the letter is not correct, you will loose a live. 
 If you reach 0 lives, the game is over.
     """)
-    print("Best of Luck!")
+    print(f"{Fore.YELLOW}Best of Luck!"
+         f"{Fore.WHITE}")
     input("Press Enter to return to main menu!")
     game_start()
 
