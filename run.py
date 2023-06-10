@@ -70,7 +70,7 @@ Expert difficulty gives the user 5 lives.
 Enter a letter from A to Z only.
 The game will display how many charaters are in the word to be guessed.
 If the letter is correct it will show in the above word.
-If the letter is not correct, you will loose a live. 
+If the letter is not correct, you will loose a life. 
 If you reach 0 lives, the game is over.
     """)
     print(f"{Fore.YELLOW}Best of Luck!"
