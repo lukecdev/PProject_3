@@ -98,8 +98,8 @@ def select_level():
     Lets the player chose the game difficulty
     """
     print("Select Level Below")
-    print("Press 1 for Easy")
-    print("Press 2 for Normal")
+    print("Press 1 for Normal")
+    print("Press 2 for Expert")
     print("Press 3 for Main Menu")
 
     level = False
@@ -132,13 +132,13 @@ def play_again():
     if play_loop == "y":
         print("you entered Y")
         clear()
-        welcome_game()
+        game_start()
     if play_loop == "n":
         clear()
-        #exit()
-        print(f"Thank you for playing {USER_NAME}!")
+        print(f"Thank you for playing {USER_NAME}!\n")
+        welcome_game()
     else:
-        print("try again")        
+        print("Please press Y or N only!")        
 
 def play_easy():
     """
