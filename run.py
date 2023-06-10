@@ -167,10 +167,14 @@ def play_easy():
             if letter.lower() not in guesses:
                 finish = False  
         if finish == True:
-            print(f"congrats {USER_NAME} you guessed {word} correct!")  
+            print(f"Congrats {USER_NAME} You got it right!") 
+            print(f"The word is {Fore.GREEN}{word.upper()}"
+                 f"{Fore.WHITE}")  
         elif num_lives == 0:
-            print(f"You ran out of lives {USER_NAME}, the correct word was {word}")
-            break    
+            print(f"Oh no! You ran out of lives {USER_NAME}") 
+            print(f"The word was {Fore.GREEN}{word.upper()}"
+                 f"{Fore.WHITE}")
+            break     
                              
     return play_again()   
 
@@ -207,10 +211,12 @@ def play_expert():
             if letter.lower() not in guesses:
                 finish = False  
         if finish == True:
-            print(f"Congrats {USER_NAME} you guessed {Fore.GREEN}{word.upper()} correct!"
+            print(f"Congrats {USER_NAME} You got it right!") 
+            print(f"The word is {Fore.GREEN}{word.upper()}"
                  f"{Fore.WHITE}")  
         elif num_lives == 0:
-            print(f"You ran out of lives {USER_NAME}, the correct word was {Fore.GREEN}{word.upper()}!"
+            print(f"Oh no! You ran out of lives {USER_NAME}") 
+            print(f"The word was {Fore.GREEN}{word.upper()}"
                  f"{Fore.WHITE}")
             break    
                              
