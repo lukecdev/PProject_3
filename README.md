@@ -1,8 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-
 
 Guess Word is a Python terminal game, which runs on the Code Institute mock terminal on Heroku. Users can try guess the word by inputting letters until they get the correct word or run out of lives. The user can view the game instructions and choose the game difficulty.
 
