@@ -6,8 +6,10 @@ Welcome,
 
 Guess Word is a Python terminal game, which runs on the Code Institute mock terminal on Heroku. Users can try guess the word by inputting letters until they get the correct word or run out of lives. The user can view the game instructions and choose the game difficulty.
 
-Git Repository can be found here: 
+Git Repository can be found here: https://github.com/lukecdev/word-guess
 live Deployed site: https://word-guess.herokuapp.com/
+
+![Mockup](/views/images/mockup-python.jpg)
 
 
 ---
@@ -69,20 +71,29 @@ During the planning process a flow chart was created to show the basic steps nee
 
 1. Welcome Screen 
     - This is the first screen when the program runs. It asks for the user to enter a name to continue.
+
     ![Welcome Screen](/views/images/welcome-screen.jpg)
 2. Main Menu
     - After a name is entered, the options of playing the game or read game rules are displayed.
+
+    ![Main Menu](/views/images/main-menu.jpg)
 
 3. Select Level     
     - The game displays the user with two difficulty levels for the game. Selecting a level affects how many lives the user gets to guess the secret word.
     - Easy level gives the user 10 lives.
     - Expert level gives the user 5 lives.
 
+    ![Level](/views/images/level.jpg)
+
 4. Game Mode
     - This section displays the blank spaces of the word to guess. The user is asked to guess a letter. If correct it will show in the space. If incorrect you user will lose a life.
 
+    ![Game Mode](/views/images/rules.jpg)
+
 5. Game Rules     
     - This section displays the instructions of how the game to the user.
+
+    ![Rules](/views/images/welcome-screen.jpg)
 ### Future Features
 
 - Word topics. Adding a section to select what topic of words to guess.
