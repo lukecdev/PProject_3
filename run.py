@@ -22,7 +22,7 @@ def welcome_game():
     global USER_NAME
     while True:
         USER_NAME = input(f"{Fore.WHITE}Please enter your name:\n")
-        if (USER_NAME.isalpha() == is True and len(USER_NAME) >= 2):
+        if (USER_NAME.isalpha() == True and len(USER_NAME) >= 2):
             print("Hello " + USER_NAME + "!\n")
             game_start()
         else:
