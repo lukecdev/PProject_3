@@ -139,6 +139,10 @@ The local development section gives instructions on how someone else could make 
 
 - ![Code Validator](/views/images/code-test-new.jpg)
 
+### Testing
+
+### Bugs
+- Bugs where encountered while 
 
 ## Credits
 

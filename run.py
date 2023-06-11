@@ -176,7 +176,7 @@ def play_easy():
         for letter in word:
             if letter.lower() not in guesses:
                 finish = False
-        if finish == if True:
+        if finish == True:
             print(f"Congrats {USER_NAME} You got it right!")
             print(f"The word is {Fore.GREEN}{word.upper()}"
                   f"{Fore.WHITE}")
@@ -221,7 +221,7 @@ def play_expert():
         for letter in word:
             if letter.lower() not in guesses:
                 finish = False
-        if finish == if True:
+        if finish == True:
             print(f"Congrats {USER_NAME} You got it right!")
             print(f"The word is {Fore.GREEN}{word.upper()}"
                   f"{Fore.WHITE}")
