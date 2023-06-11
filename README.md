@@ -27,8 +27,7 @@ live Deployed site: https://word-guess.herokuapp.com/
 
 * [Technologies Used](#technologies-used)
 
-* [Deployment & Local Development](#deployment--local-development)
-  * [Deployment](#deployment)
+* [Deployment](#deployment)
   * [Local Development](#local-development)
     * [How to Fork](#how-to-fork)
     * [How to Clone](#how-to-clone)
@@ -36,10 +35,6 @@ live Deployed site: https://word-guess.herokuapp.com/
 * [Testing](#testing)
 
 * [Credits](#credits)
-  * [Code Used](#code-used)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -86,7 +81,7 @@ During the planning process a flow chart was created to show the basic steps nee
 4. Game Mode
     - This section displays the blank spaces of the word to guess. The user is asked to guess a letter. If correct it will show in the space. If incorrect you user will lose a life.
 
-5. Game Rules    
+5. Game Rules     
     - This section displays the instructions of how the game to the user.
 ### Future Features
 
@@ -100,10 +95,11 @@ During the planning process a flow chart was created to show the basic steps nee
 3. Heroku - To deploy the live application.
 4. Gitpod - Cload based code editor used.
 5. LucidCharts - Used for flow chart creation.
+6. Colored - Was used to add color to terminal text.
 
-## Deployment & Local Development
+## Deployment
 
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
+The project was deployed using Code Institutes mock terminal for Heroku.
 
 ### Deployment
 
@@ -113,21 +109,25 @@ Include instructions here on how to deploy your project. For your first project 
 
 The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
 
-#### How to Fork
+#### Forking the repository
+1. Log into the Github repository.
+2. Underneath your avatar is a button labelled **Fork**, click this.
+3. You should have your own copy now..
 
-Place instructions on how to fork your project here.
-
-#### How to Clone
-
-Place instructions on how to clone your project here.
+#### Cloning the repository
+1. Log into Github and locate the repository.
+2. Under the repository name click the button labelled **code**.
+3. You will see an option to clone or download.
+4. Copy the url for cloning by clicking the clipboard icon.
+5. Launch Codeanywhere or your own choice of directory.
+6. Change the current working directory to the location you want the cloned directory to be.
+7. Type git clone and paste the Url from step 4. 
+8. Press enter to create the cloned directory.
 
 ## Testing
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
+- 
 
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
 
 ## Credits
 
@@ -135,27 +135,12 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 The Credits section is where you can credit all the people and sources you used throughout your project.
 
-### Code Used
-
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
-
-### Content
-
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
-
-###  Media
-
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
   
 ###  Acknowledgments
 
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
+A huge thanks to [Chris Quinn](https://github.com/10xOXR) for his help, suggestions and patiece while I put together this project. 
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
 ## Creating the Heroku app
 
@@ -163,17 +148,3 @@ When you create the app, you will need to add two buildpacks from the _Settings_
 
 1. `heroku/python`
 2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
