@@ -69,7 +69,7 @@ During the planning process a flow chart was created to show the basic steps nee
 
 1. Welcome Screen 
     - This is the first screen when the program runs. It asks for the user to enter a name to continue.
-
+    ![Welcome Screen](/views/images/welcome-screen.jpg)
 2. Main Menu
     - After a name is entered, the options of playing the game or read game rules are displayed.
 
