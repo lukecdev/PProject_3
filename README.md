@@ -132,7 +132,7 @@ The local development section gives instructions on how someone else could make 
 
 ## Testing
 
-- 
+- ![Code Validator](/views/images/code-test-new.jpg)
 
 
 ## Credits
