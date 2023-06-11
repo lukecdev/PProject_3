@@ -78,13 +78,21 @@ During the planning process a flow chart was created to show the basic steps nee
 2. Main Menu
     - After a name is entered, the options of playing the game or read game rules are displayed.
 
-3. Select Level    
-    - 
+3. Select Level     
+    - The game displays the user with two difficulty levels for the game. Selecting a level affects how many lives the user gets to guess the secret word.
+    - Easy level gives the user 10 lives.
+    - Expert level gives the user 5 lives.
 
+4. Game Mode
+    - This section displays the blank spaces of the word to guess. The user is asked to guess a letter. If correct it will show in the space. If incorrect you user will lose a life.
+
+5. Game Rules    
+    - This section displays the instructions of how the game to the user.
 ### Future Features
 
 - Word topics. Adding a section to select what topic of words to guess.
 - Graphics would help improve the appeal of the game.
+- The ability for the user to enter the full word if they know it. 
 
 ## Technologies Used
 1. Python - All code was written in Python language
