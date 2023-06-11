@@ -59,7 +59,9 @@ I want instructions for the game to be simple to understand.
 
 ### Flow Chart
 
-During the planning process a flow chart was created to show the basic steps needed to play the game.
+During the planning process a flow chart was created to show the basic steps needed to play the game. This was used to develop the logic steps of the game.
+
+![FlowChart](/views/images/flowchart.jpg)
 
 
 ## Features
@@ -122,7 +124,7 @@ The local development section gives instructions on how someone else could make 
 
 #### Cloning the repository
 1. Log into Github and locate the repository.
-2. Under the repository name click the button labelled **code**.
+2. Under the repository name click the button labelled - code.
 3. You will see an option to clone or download.
 4. Copy the url for cloning by clicking the clipboard icon.
 5. Launch Codeanywhere or your own choice of directory.
@@ -131,6 +133,9 @@ The local development section gives instructions on how someone else could make 
 8. Press enter to create the cloned directory.
 
 ## Testing
+
+### Code Validating
+- Code was validated using [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
 - ![Code Validator](/views/images/code-test-new.jpg)
 
@@ -145,12 +150,3 @@ The Credits section is where you can credit all the people and sources you used 
 ###  Acknowledgments
 
 A huge thanks to [Chris Quinn](https://github.com/10xOXR) for his help, suggestions and patiece while I put together this project. 
-
-
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
