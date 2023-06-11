@@ -22,7 +22,18 @@ words = [
     'river',
     'snake',
     'train',
+    'Raspberry',
+    'Blackberry',
+    'Bumblebee',
+    'Cockroach',
+    'Butterfly',
+    'Kangaroo',
+    'Saxophone',
+    'Drums',
+    'Golf',
+    'Rugby',
 ]
+
 
 
 

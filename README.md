@@ -91,6 +91,7 @@ During the planning process a flow chart was created to show the basic steps nee
     - This section displays the instructions of how the game to the user.
 
     ![Rules](/views/images/welcome-screen.jpg)
+
 ### Future Features
 
 - Word topics. Adding a section to select what topic of words to guess.
@@ -142,7 +143,9 @@ The local development section gives instructions on how someone else could make 
 ### Testing
 
 ### Bugs
-- Bugs where encountered while 
+- Bugs where encountered while coding the project. Most where solved during the process through continuious testing of the code. Using print statments on the code editor terminal, I was able to quickly test sections and find bugs. When a function was finalilzed it was run though the code validator. 
+
+  - One of the ongoing bugs that I was unable to fix in time was the syntax error in line 25 and 224, the code validator was suggesting to add a "if" and "is" to the true satatment, but this caused the final program not run. So the decision wass made to leave these bugs in place as the game currenlty runs to my desired result with them.
 
 ## Credits
 
@@ -154,3 +157,4 @@ The Credits section is where you can credit all the people and sources you used 
 ###  Acknowledgments
 
 A huge thanks to [Chris Quinn](https://github.com/10xOXR) for his help, suggestions and patiece while I put together this project. 
+
