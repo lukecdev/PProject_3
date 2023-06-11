@@ -1,10 +1,11 @@
 import random
-from words import words 
+from words import words
 import os
-import colorama # Adds color to text
+import colorama  # Adds color to text
 from colorama import Fore, Style
 
 USER_NAME = ""
+
 
 def clear():
     """
@@ -12,21 +13,23 @@ def clear():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
+
 def welcome_game():
     """
-    Start function with game instructions 
+    Start function with game instructions
     """
     print(f"\n{Fore.GREEN}WELCOME TO GUESS THE WORD!\n")
     global USER_NAME
     while True:
         USER_NAME = input(f"{Fore.WHITE}Please enter your name:\n")
-        if (USER_NAME.isalpha() == True and len(USER_NAME) >=2):
+        if (USER_NAME.isalpha() == is True and len(USER_NAME) >= 2):
             print("Hello " + USER_NAME + "!\n")
             game_start()
         else:
-            print("User name must be greater than 2 and only letters.")  
+            print("User name must be greater than 2 and only letters.")
             welcome_game()
-    
+
+
 def game_start():
     """
     Main Menu section of the game.
@@ -43,53 +46,56 @@ def game_start():
         if select == "1":
             topic = True
             select_level()
-            
+
         elif select == "2":
             topic = True
             instructions()
-        
+
         elif select == "3":
             topic = True
             clear()
-            exit()  
+            exit()
 
         else:
             print("Please select 1, 2 or 3 only to continue")
             game_start()
+
 
 def instructions():
     """
     Shows the instructions of the game.
     """
     print(f"{Fore.YELLOW}Game Instructions:"
-         f"{Fore.WHITE}") 
+          f"{Fore.WHITE}")
     print("""
 Enter the game and choose ypur difficulty.
 Easy difficulty gives the user 10 lives.
-Expert difficulty gives the user 5 lives.  
+Expert difficulty gives the user 5 lives.
 Enter a letter from A to Z only.
 The game will display how many charaters are in the word to be guessed.
 If the letter is correct it will show in the above word.
-If the letter is not correct, you will loose a life. 
+If the letter is not correct, you will loose a life.
 If you reach 0 lives, the game is over.
     """)
     print(f"{Fore.YELLOW}Best of Luck!"
-         f"{Fore.WHITE}")
+          f"{Fore.WHITE}")
     input("Press Enter to return to main menu!")
     game_start()
+
 
 def get_random_word():
     """
     Get random words for game from list
-    """   
+    """
     global word
-    word = random.choice(words) 
+    word = random.choice(words)
 
     return word.lower()
 
+
 def select_level():
     """
-    Lets the player chose the game difficulty 
+    Lets the player chose the game difficulty
     which affects the amount of lives they get.
     """
     print("Select Level Below:")
@@ -105,7 +111,7 @@ def select_level():
         if select == "1":
             level = True
             play_easy()
-            
+
         elif select == "2":
             level = True
             play_expert()
@@ -117,6 +123,7 @@ def select_level():
         else:
             print("Please select 1, 2 or 3 only to continue")
             select_level()
+
 
 def play_again():
     """
@@ -134,13 +141,14 @@ def play_again():
         print(f"Thank you for playing {USER_NAME}!\n")
         welcome_game()
     else:
-        print("Please press Y or N only!")        
+        print("Please press Y or N only!")
+
 
 def play_easy():
     """
     Runs the game with easy difficulty, 10 lives
     Game is based around the Hang-Man game from the youtube video
-    https://www.youtube.com/watch?v=5x6iAKdJB6U 
+    https://www.youtube.com/watch?v=5x6iAKdJB6U
     """
     word = get_random_word()
     num_lives = 10
@@ -155,7 +163,7 @@ def play_easy():
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print(" _ ", end= "")   
+                print(" _ ", end= "")
         print(" ")
 
         guess = input(f"{USER_NAME}'s lives left {num_lives}, Next letter: ")
@@ -163,28 +171,29 @@ def play_easy():
         if guess.lower() not in word.lower():
             num_lives -= 1
             print(f"letters guessed: {guesses}")
-             
+
         finish = True
         for letter in word:
             if letter.lower() not in guesses:
-                finish = False  
-        if finish == True:
-            print(f"Congrats {USER_NAME} You got it right!") 
+                finish = False
+        if finish == if True:
+            print(f"Congrats {USER_NAME} You got it right!")
             print(f"The word is {Fore.GREEN}{word.upper()}"
-                 f"{Fore.WHITE}")  
+                  f"{Fore.WHITE}")
         elif num_lives == 0:
-            print(f"Oh no! You ran out of lives {USER_NAME}") 
+            print(f"Oh no! You ran out of lives {USER_NAME}")
             print(f"The word was {Fore.GREEN}{word.upper()}"
-                 f"{Fore.WHITE}")
-            break     
-                             
-    return play_again()   
+                  f"{Fore.WHITE}")
+            break
+
+    return play_again()
+
 
 def play_expert():
     """
     Runs the game in expert difficulty, 5 lives.
     Game is based around the Hang-Man game from the youtube video
-    https://www.youtube.com/watch?v=5x6iAKdJB6U 
+    https://www.youtube.com/watch?v=5x6iAKdJB6U
     """
     word = get_random_word()
     num_lives = 5
@@ -199,7 +208,7 @@ def play_expert():
             if letter.lower() in guesses:
                 print(letter, end=" ")
             else:
-                print(" _ ", end= "")   
+                print(" _ ", end= "")
         print(" ")
 
         guess = input(f"{USER_NAME}'s lives left {num_lives}, Next letter: ")
@@ -207,27 +216,29 @@ def play_expert():
         if guess.lower() not in word.lower():
             num_lives -= 1
             print(f"letters guessed: {guesses}")
-             
+
         finish = True
         for letter in word:
             if letter.lower() not in guesses:
-                finish = False  
-        if finish == True:
-            print(f"Congrats {USER_NAME} You got it right!") 
+                finish = False
+        if finish == if True:
+            print(f"Congrats {USER_NAME} You got it right!")
             print(f"The word is {Fore.GREEN}{word.upper()}"
-                 f"{Fore.WHITE}")  
+                  f"{Fore.WHITE}")
         elif num_lives == 0:
-            print(f"Oh no! You ran out of lives {USER_NAME}") 
+            print(f"Oh no! You ran out of lives {USER_NAME}")
             print(f"The word was {Fore.GREEN}{word.upper()}"
-                 f"{Fore.WHITE}")
-            break    
-                             
-    return play_again()   
+                  f"{Fore.WHITE}")
+            break
+
+    return play_again()
+
 
 def main():
     """
     Function to run the game from the beginning
     """
     welcome_game()
-    
+
+
 main()
