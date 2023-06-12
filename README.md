@@ -109,14 +109,15 @@ During the planning process a flow chart was created to show the basic steps nee
 ## Deployment
 
 The project was deployed using Code Institutes mock terminal for Heroku.
+The steps taken were:
 
-### Deployment
-
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
-
-### Local Development
-
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
+In [heroku](https://dashboard.heroku.com/apps): 
+    
+  1. Open the "new" menu and click on "Create new app".
+  2. Fill form fields with app name and region (Europe). Click on "Create app".
+  3. In the "Settings" section, click on "Add buildpack" and add Python and NodeJS, *in that order*.
+  4. In "Deployment method", select the GitHub option and provide the repository details. Click on "Connect".
+  5. Click on "Enable Automatic Deploys" and finally, click on "Deploy Branch".
 
 #### Forking the repository
 1. Log into the Github repository.
@@ -140,8 +141,6 @@ The local development section gives instructions on how someone else could make 
 
 - ![Code Validator](/views/images/code-test-new.jpg)
 
-### Testing
-
 ### Bugs
 - Bugs where encountered while coding the project. Most where solved during the process through continuious testing of the code. Using print statments on the code editor terminal, I was able to quickly test sections and find bugs. When a function was finalilzed it was run though the code validator. 
 
@@ -149,12 +148,11 @@ The local development section gives instructions on how someone else could make 
 
 ## Credits
 
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
+- I used watched this ![Youtube Video](https://www.youtube.com/watch?v=5x6iAKdJB6U) which helped me build the random word selector and  
+  word guessing structure of the game. I got inspiration from this video on how to structure the functions.
 
-The Credits section is where you can credit all the people and sources you used throughout your project.
-
-  
 ###  Acknowledgments
 
-A huge thanks to [Chris Quinn](https://github.com/10xOXR) for his help, suggestions and patiece while I put together this project. 
+- A huge thanks to [Chris Quinn](https://github.com/10xOXR) for his help, suggestions and patiece while I put together this project. 
 
+- A huge thanks to [Jubril Akolade](https://github.com/Jubrillionaire) for his help in last minute issues I had with my prject. 
