@@ -2,6 +2,7 @@
 Guess Word is a Python terminal game, which runs on the Code Institute mock terminal on Heroku. Users can try guess the word by inputting letters until they get the correct word or run out of lives. The user can view the game instructions and choose the game difficulty.
 
 Git Repository can be found here: https://github.com/lukecdev/word-guess
+
 live Deployed site: https://word-guess.herokuapp.com/
 
 ![Mockup](/views/images/mockup-python.jpg)
@@ -148,7 +149,7 @@ In [heroku](https://dashboard.heroku.com/apps):
 
 ## Credits
 
-- I used watched this ![Youtube Video](https://www.youtube.com/watch?v=5x6iAKdJB6U) which helped me build the random word selector and  
+- I used watched this [Youtube Video](https://www.youtube.com/watch?v=5x6iAKdJB6U) which helped me build the random word selector and  
   word guessing structure of the game. I got inspiration from this video on how to structure the functions.
 
 ###  Acknowledgments
